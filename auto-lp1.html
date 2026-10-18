@@ -135,13 +135,16 @@
   }
 
   .fine { margin: 36px 0 0; font-size: 18px; letter-spacing: .2px; }
-  .disclaimer {
-    margin: 56px auto 0; padding-top: 18px; max-width: 760px;
+  .site-footer {
+    margin: 56px auto 0; padding-top: 22px; max-width: 680px;
     border-top: 1px solid #e3e5e8;
-    font-size: 11.5px; line-height: 1.6; color: #80868b; text-align: center;
+    color: #80868b; text-align: center;
   }
-  .disclaimer p { margin: 0 0 8px; }
-  .disclaimer a { color: #80868b; }
+  .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 22px; margin: 0 0 14px; padding: 0; list-style: none; }
+  .footer-links a { color: #5f6368; font-size: 14px; font-weight: 600; text-decoration: none; }
+  .footer-links a:hover { color: #1d4ed8; text-decoration: underline; }
+  .footer-note { margin: 0 0 12px; font-size: 12px; line-height: 1.6; }
+  .footer-copy { margin: 0; font-size: 12px; }
 
   /* Phones: noticeably larger text */
   @media (max-width: 600px) {
@@ -164,7 +167,9 @@
     .error { font-size: 20px; }
     .done p { font-size: 22px; }
     .fine { font-size: 17px; }
-    .disclaimer { font-size: 12px; margin-top: 44px; }
+    .site-footer { margin-top: 44px; }
+    .footer-links a { font-size: 15px; }
+    .footer-note, .footer-copy { font-size: 12.5px; }
   }
 </style>
 </head>
@@ -219,11 +224,14 @@
   </section>
 
   <p class="fine serif">*YOU MUST ALREADY BE INSURED TO APPLY!</p>
-  <footer class="disclaimer">
-    <p>This site is not an insurance company or agent and does not provide insurance quotes directly. We connect consumers with third-party insurance providers and may be compensated when you are matched or click through. Not all providers are available in all areas.</p>
-    <p>Rates, discounts and savings vary by driver, vehicle, location, driving record and provider, and are not guaranteed. The $39.99/mo rate and $179 to $39 example reflect an individual result and are not typical; your rate may be higher. Savings up to $710 is a maximum, not an average.</p>
-    <p>By continuing, you agree that the information you provide may be shared with insurance providers and partners to contact you about quotes.</p>
-    <p>&copy; <span id="year"></span> [YOUR COMPANY NAME] &middot; <a href="#">Privacy Policy</a> &middot; <a href="#">Terms</a></p>
+  <footer class="site-footer">
+    <ul class="footer-links">
+      <li><a href="https://savermode.com/privacy.html">Privacy Policy</a></li>
+      <li><a href="https://savermode.com/terms.html">Terms of Service</a></li>
+      <li><a href="mailto:Info@Savermode.com">Contact</a></li>
+    </ul>
+    <p class="footer-note">Saver Mode is not an insurance company or agent. We connect you with third-party providers and may be paid when you're matched or click through. Rates and savings vary and aren't guaranteed; the $179 to $39 example is one individual result, not typical, and $710 is a maximum, not an average. By continuing, you agree your information may be shared with providers and partners who may contact you about quotes.</p>
+    <p class="footer-copy">&copy; <span id="year"></span> Saver Mode</p>
   </footer>
 </main>
 
